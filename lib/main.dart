@@ -9,16 +9,18 @@ import 'package:flutter1_app/routes.dart';
 
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.white));
   runApp(MaterialApp(
     title: "Baby Care",
     // home: My(),
     theme: ThemeData(
-      primarySwatch: Colors.pink,
+      primarySwatch: Colors.red,
 
     ),
-    initialRoute: "/",
+    debugShowCheckedModeBanner: false,
+    initialRoute: MyRoutes.homeRoute,
     routes: {
-      "/": (context) => LoginPage(),
+      MyRoutes.loginRoute: (context) => LoginPage(),
       MyRoutes.homeRoute: (context) => My(),
     },
   ));

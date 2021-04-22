@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter1_app/main.dart';
 import 'package:flutter1_app/routes.dart';
 
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -75,6 +76,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               TextFormField(
                 keyboardType: TextInputType.text,
+                obscureText: true,
                 decoration: InputDecoration(
                   hintText: "Enter Password",
                   labelText: "Password",
@@ -95,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             Material(
               color: Colors.red,
-              borderRadius: BorderRadius.circular(button?50:20),
+              borderRadius: BorderRadius.circular(button?50:10),
               child: InkWell(
 
                 onTap :() => moveToHome(context),
@@ -112,6 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                 color: Colors.white),
 
                 ),
+
                 // decoration: BoxDecoration(
                 //   color: Colors.white70,
                 //   borderRadius: BorderRadius.circular(8),

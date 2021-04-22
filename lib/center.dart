@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
-class C extends StatelessWidget {
+class C extends StatefulWidget {
   @override
+  _CState createState() => _CState();
+}
+
+class _CState extends State<C> {
+  String n="";
+
+  @override
+
   Widget build(BuildContext context) {
     return Center(
 
@@ -26,9 +34,17 @@ class C extends StatelessWidget {
                   width: 10,
                 ),
 
+
                 Text(
-                  "Baby Name"
+                  "Baby Name $n",style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                 fontSize: 20,
                 ),
+
+
+                ),
+
+
                 SizedBox(
                   height: 10,
                   width: 10,
@@ -41,9 +57,27 @@ class C extends StatelessWidget {
                       hintText: "Enter Name",
                       labelText: "Name",
 
-                    ) ),
+                    ),
+                  onChanged: (value){
+                      n=value;
+                      setState(() {
+
+                      });
+
+                  },
+
+
+
+
+
+
+
+                ),
+
+
 
               ],
+
 
 
             ),
